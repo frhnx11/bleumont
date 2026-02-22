@@ -22,10 +22,8 @@ export default function Home() {
       <section className="bg-gray-100 py-24 px-8 border-t border-gray-200">
         <div className="mx-auto max-w-3xl">
           <p className="text-3xl text-black leading-relaxed text-center">
-            Our business is very simple. Unlike traditional companies, we build
-            softwares entirely customized to cater to your business needs. Each software is
-            built from scratch harnessing the power of AI to provide a faster, cheaper and
-            more personal experience.
+            We are an AI-native platform that replaces traditional SaaS by
+            generating and evolving business software tailored to each company.
           </p>
         </div>
       </section>
@@ -59,7 +57,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-[#90e0ef] py-24 px-8">
+      <section id="products" className="bg-[#90e0ef] py-24 px-8">
         <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-10 px-12 shadow-lg">
           <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-semibold text-black tracking-tight">Our Products</h2>
           <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-xl text-gray-600 tracking-tight">

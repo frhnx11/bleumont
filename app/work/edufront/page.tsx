@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import { GraduationCap, Wallet, CalendarRange, RefreshCw, Receipt, ClipboardList, Headset, ArrowRight, ArrowDown } from "lucide-react";
+import { GraduationCap, Wallet, CalendarRange, RefreshCw, Receipt, ClipboardList, ArrowRight, ArrowDown } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const tools = [
@@ -211,7 +211,6 @@ export default function EdufrontPage() {
               { icon: RefreshCw, name: "Student Re-scheduling", bg: "bg-indigo-100", iconColor: "text-indigo-600" },
               { icon: ClipboardList, name: "Worksheet Assignments", bg: "bg-rose-100", iconColor: "text-rose-600" },
               { icon: Receipt, name: "Student Fee Payment", bg: "bg-purple-100", iconColor: "text-purple-600" },
-              { icon: Headset, name: "CRM System", bg: "bg-cyan-100", iconColor: "text-cyan-600" },
             ].map((feature) => (
               <div
                 key={feature.name}
