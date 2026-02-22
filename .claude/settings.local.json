@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.xero.com)",
+      "WebFetch(domain:www.payboy.biz)",
+      "WebFetch(domain:engage-ai.co)",
+      "WebFetch(domain:www.capterra.com)",
+      "WebFetch(domain:www.edulabs.com.sg)",
+      "WebFetch(domain:payboy.biz)",
+      "Bash(ls:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(tail:*)"
+    ]
+  }
+}

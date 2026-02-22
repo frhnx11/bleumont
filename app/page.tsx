@@ -61,7 +61,7 @@ export default function Home() {
       </section>
       <section className="bg-[#90e0ef] py-24 px-8">
         <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-10 px-12 shadow-lg">
-          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-semibold text-black tracking-tight">Our Services</h2>
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-semibold text-black tracking-tight">Our Products</h2>
           <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-xl text-gray-600 tracking-tight">
             We can build anything. But here are some examples to understand us better
           </p>
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-10 flex flex-col justify-center">
                 <p className="text-xs text-gray-400 tracking-widest uppercase">
-                  01 / 02 &nbsp;&middot;&nbsp; Distribution System
+                  01 / 03 &nbsp;&middot;&nbsp; Distribution System
                 </p>
                 <p className="text-lg leading-relaxed text-gray-800 mt-6">
                   A complete distribution management system with inventory tracking, sales processing, and automated invoicing — built entirely around your workflow.
@@ -93,7 +93,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-10 flex flex-col justify-center">
                 <p className="text-xs text-gray-400 tracking-widest uppercase">
-                  02 / 02 &nbsp;&middot;&nbsp; Learning Management System
+                  02 / 03 &nbsp;&middot;&nbsp; Learning Management System
                 </p>
                 <p className="text-lg leading-relaxed text-gray-800 mt-6">
                   A comprehensive learning management system covering courses, assignments, teachers, students, fees, payroll, leave applications, and accounting — all in one platform.
@@ -106,6 +106,28 @@ export default function Home() {
                 <img
                   src="/work/edufront/edufront1.png"
                   alt="Learning Management System"
+                  className="absolute inset-0 object-cover object-left h-full w-full md:rounded-r-3xl"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="p-10 flex flex-col justify-center">
+                <p className="text-xs text-gray-400 tracking-widest uppercase">
+                  03 / 03 &nbsp;&middot;&nbsp; Shipping Logistics ERP
+                </p>
+                <p className="text-lg leading-relaxed text-gray-800 mt-6">
+                  A powerful shipping logistics ERP system for managing vessels, cargo, deliveries, and accounts — providing real-time fleet tracking and cargo distribution insights.
+                </p>
+                <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
+                  Vessels &nbsp;·&nbsp; Cargo &nbsp;·&nbsp; Delivery &nbsp;·&nbsp; Fleet Tracking
+                </p>
+              </div>
+              <div className="relative min-h-[350px]">
+                <img
+                  src="/work/seapol/image.png"
+                  alt="Shipping Logistics ERP"
                   className="absolute inset-0 object-cover object-left h-full w-full md:rounded-r-3xl"
                 />
               </div>
