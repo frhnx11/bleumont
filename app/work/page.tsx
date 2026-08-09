@@ -2,15 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
+// Display order is this array's order — the grid maps over it directly.
 const projects = [
-  {
-    name: "Edufront LMS + ERP",
-    logo: "/work/edufront/edufrontlogo.png",
-    description:
-      "A comprehensive learning management system with courses, fees, payroll, and accounting.",
-    tags: "LMS · ERP · Courses · Fees",
-    href: "/work/edufront",
-  },
   {
     name: "SKT Enterprises Distribution ERP",
     logo: "/work/skt/sktlogo.jpg",
@@ -26,6 +19,14 @@ const projects = [
       "A shipping logistics ERP for vessels, cargo, deliveries, and fleet tracking.",
     tags: "Logistics · Cargo · Fleet · ERP",
     href: "/work/seapol",
+  },
+  {
+    name: "Edufront LMS + ERP",
+    logo: "/work/edufront/edufrontlogo.png",
+    description:
+      "A comprehensive learning management system with courses, fees, payroll, and accounting.",
+    tags: "LMS · ERP · Courses · Fees",
+    href: "/work/edufront",
   },
 ];
 
