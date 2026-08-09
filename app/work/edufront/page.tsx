@@ -6,42 +6,41 @@ import Navbar from "@/components/Navbar";
 import { GraduationCap, Wallet, CalendarRange, RefreshCw, Receipt, ClipboardList, ArrowRight, ArrowDown } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
+// Hosted on Cloudflare R2 (zero egress) rather than public/ — the file is 26 MB
+// and would otherwise live in git history forever and burn Vercel bandwidth.
+const DEMO_VIDEO_URL =
+  "https://pub-6d8a0fb48e5c438f8f230951adac4c79.r2.dev/bluemont-lms-demo.mp4";
+
 const tools = [
   {
     name: "EduLabs",
     logo: "/work/edufront/edulabs.png",
     purpose: "Student Information System",
-    cost: "$450/mo",
   },
   {
     name: "Wizlearn",
     logo: "/work/edufront/wizlearn.jpg",
     purpose: "Learning Management System",
-    cost: "$500/mo",
   },
   {
     name: "Xero",
     logo: "/work/edufront/xero.svg",
     purpose: "Accounting",
-    cost: "$69/mo",
   },
   {
     name: "Payboy",
     logo: "/work/edufront/payboy.png",
     purpose: "HR & Payroll",
-    cost: "$390/mo",
   },
   {
     name: "Engages AI",
     logo: "/work/edufront/engages.jpg",
     purpose: "Customer Service",
-    cost: "$300/mo",
   },
   {
     name: "Trello",
     logo: "/work/edufront/trello.png",
     purpose: "Internal Communication",
-    cost: "$650/mo",
   },
 ];
 
@@ -118,7 +117,26 @@ export default function EdufrontPage() {
     <div>
       <Navbar />
       <section className="bg-[#90e0ef] min-h-screen pt-44 pb-24 px-8">
-        <div className="mx-auto max-w-4xl bg-orange-200 rounded-3xl py-12 px-8 shadow-lg">
+        <div className="mx-auto max-w-4xl bg-white rounded-3xl py-12 px-8 shadow-lg">
+          <div className="text-center">
+            <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
+              Demo Video
+            </h2>
+          </div>
+
+          <div className="mt-10">
+            <video
+              src={DEMO_VIDEO_URL}
+              poster="/work/edufront/demo-poster.jpg"
+              controls
+              playsInline
+              preload="none"
+              className="w-full rounded-2xl shadow-lg bg-black"
+            />
+          </div>
+        </div>
+
+        <div className="mt-12 mx-auto max-w-4xl bg-orange-200 rounded-3xl py-12 px-8 shadow-lg">
           <div className="text-center">
             <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
               Before Bleumont:
@@ -146,20 +164,8 @@ export default function EdufrontPage() {
                   {tool.name}
                 </h3>
                 <p className="mt-1 text-xs text-gray-500">{tool.purpose}</p>
-                <p className="mt-2 text-lg font-bold text-gray-900">
-                  {tool.cost}
-                </p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 text-center bg-white rounded-3xl py-8 px-12 shadow-lg mx-auto max-w-xl">
-            <p className="font-[family-name:var(--font-geist-sans)] text-lg text-gray-600 tracking-tight">
-              Estimated total
-            </p>
-            <p className="font-[family-name:var(--font-geist-sans)] mt-2 text-4xl font-bold text-black tracking-tight">
-              ~$2,359/month
-            </p>
           </div>
         </div>
 
@@ -184,15 +190,6 @@ export default function EdufrontPage() {
               height={800}
               className="w-full rounded-2xl shadow-lg"
             />
-          </div>
-
-          <div className="mt-10 text-center bg-white rounded-3xl py-8 px-12 shadow-lg mx-auto max-w-xl">
-            <p className="font-[family-name:var(--font-geist-sans)] text-lg text-gray-600 tracking-tight">
-              Everything included
-            </p>
-            <p className="font-[family-name:var(--font-geist-sans)] mt-2 text-4xl font-bold text-black tracking-tight">
-              $100/month
-            </p>
           </div>
         </div>
       </section>

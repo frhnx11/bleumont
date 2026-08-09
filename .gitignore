@@ -24,6 +24,11 @@
 .DS_Store
 *.pem
 
+# video — hosted on Cloudflare R2, not committed (see DEMO_VIDEO_URL in
+# app/work/edufront/page.tsx). Keeps large binaries out of git history.
+*.mp4
+*.mov
+
 # debug
 npm-debug.log*
 yarn-debug.log*
