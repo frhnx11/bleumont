@@ -156,7 +156,7 @@ export default function SktPage() {
         <div className="mx-auto max-w-6xl bg-white rounded-3xl py-12 px-8 shadow-lg">
           <div className="text-center">
             <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
-              Demo Video
+              Bleumont Distribution ERP — Demo Video
             </h2>
           </div>
 
