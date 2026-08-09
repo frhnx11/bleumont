@@ -17,6 +17,7 @@ const projects = [
     description:
       "A complete distribution management system with inventory, sales, and invoicing.",
     tags: "Distribution · Inventory · Sales",
+    href: "/work/skt",
   },
   {
     name: "Seapol Logistics ERP",
@@ -24,6 +25,7 @@ const projects = [
     description:
       "A shipping logistics ERP for vessels, cargo, deliveries, and fleet tracking.",
     tags: "Logistics · Cargo · Fleet · ERP",
+    href: "/work/seapol",
   },
 ];
 
