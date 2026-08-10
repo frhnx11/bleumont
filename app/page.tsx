@@ -9,19 +9,22 @@ export default function Home() {
       <Navbar />
       <section className="relative h-screen">
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
-          <h1 className="font-[family-name:var(--font-smooch-sans)] text-7xl font-extrabold tracking-tight">
+          <h1 className="font-[family-name:var(--font-smooch-sans)] text-5xl sm:text-7xl font-extrabold tracking-tight">
             <span className="text-gray-900">Bleu</span>
             <span className="text-[#90e0ef]">mont</span>
           </h1>
-          <p className="mt-8 text-xl text-gray-500 whitespace-nowrap">
+          {/* No max-width here on purpose: the sentence is ~692px, so at desktop
+              widths it still sits on one line by itself. Capping it would make
+              desktop wrap, which this change must not do. */}
+          <p className="mt-6 sm:mt-8 px-4 sm:px-0 text-center text-base sm:text-xl text-gray-500">
             Customized software solutions to make your business processes more efficient
           </p>
         </div>
         <LiquidEther colors={["#90e0ef"]} />
       </section>
-      <section className="bg-gray-100 py-24 px-8 border-t border-gray-200">
+      <section className="bg-gray-100 py-16 sm:py-24 px-4 sm:px-8 border-t border-gray-200">
         <div className="mx-auto max-w-3xl">
-          <p className="text-3xl text-black leading-relaxed text-center">
+          <p className="text-xl sm:text-3xl text-black leading-relaxed text-center">
             We are an AI-native platform that replaces traditional SaaS by
             generating and evolving business software tailored to each company.
           </p>
@@ -38,18 +41,20 @@ export default function Home() {
         }} />
 
         {/* Prompt → Application flow */}
-        <div className="relative flex items-center justify-center gap-8 px-8">
-          <div className="px-8 py-3 rounded-full border-2 border-gray-300 bg-white">
-            <span className="text-xl font-medium text-gray-800">Problem</span>
+        {/* Stacks vertically on a phone — side by side the two pills plus the
+            connector need ~500px. sm: restores the original horizontal row. */}
+        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-4 sm:px-8">
+          <div className="px-6 sm:px-8 py-3 rounded-full border-2 border-gray-300 bg-white">
+            <span className="text-lg sm:text-xl font-medium text-gray-800">Problem</span>
           </div>
-          <div className="w-24 h-[2px] bg-gray-300" />
-          <div className="px-8 py-3 rounded-full bg-gradient-to-r from-[#90e0ef] to-[#9ca3af]">
-            <span className="text-xl font-medium text-gray-800">Application</span>
+          <div className="h-8 w-[2px] sm:h-[2px] sm:w-24 bg-gray-300" />
+          <div className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-[#90e0ef] to-[#9ca3af]">
+            <span className="text-lg sm:text-xl font-medium text-gray-800">Application</span>
           </div>
         </div>
 
         {/* Full-width app screenshots */}
-        <div className="relative mt-32">
+        <div className="relative mt-16 sm:mt-32">
           <img
             src="/image.png"
             alt="Example applications built by Bleumont"
@@ -57,28 +62,28 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="products" className="bg-[#90e0ef] py-24 px-8">
-        <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-10 px-12 shadow-lg">
-          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-semibold text-black tracking-tight">Our Products</h2>
-          <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-xl text-gray-600 tracking-tight">
+      <section id="products" className="bg-[#90e0ef] py-16 sm:py-24 px-4 sm:px-8">
+        <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-8 px-5 sm:py-10 sm:px-12 shadow-lg">
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-semibold text-black tracking-tight">Our Products</h2>
+          <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-base sm:text-xl text-gray-600 tracking-tight">
             We can build anything. But here are some examples to understand us better
           </p>
         </div>
         <div className="mt-12 mx-auto max-w-4xl px-4">
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-10 flex flex-col justify-center">
+              <div className="p-6 sm:p-10 flex flex-col justify-center">
                 <p className="text-xs text-gray-400 tracking-widest uppercase">
                   01 / 03 &nbsp;&middot;&nbsp; Distribution System
                 </p>
-                <p className="text-lg leading-relaxed text-gray-800 mt-6">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
                   A complete distribution management system with inventory tracking, sales processing, and automated invoicing — built entirely around your workflow.
                 </p>
                 <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
                   Inventory &nbsp;·&nbsp; Sales &nbsp;·&nbsp; Invoicing
                 </p>
               </div>
-              <div className="relative min-h-[350px]">
+              <div className="relative min-h-[220px] sm:min-h-[350px]">
                 <img
                   src="/work/skt/best-erp-software-04-microsoft.webp"
                   alt="Distribution System"
@@ -89,18 +94,18 @@ export default function Home() {
           </div>
           <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-10 flex flex-col justify-center">
+              <div className="p-6 sm:p-10 flex flex-col justify-center">
                 <p className="text-xs text-gray-400 tracking-widest uppercase">
                   02 / 03 &nbsp;&middot;&nbsp; Learning Management System
                 </p>
-                <p className="text-lg leading-relaxed text-gray-800 mt-6">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
                   A comprehensive learning management system covering courses, assignments, teachers, students, fees, payroll, leave applications, and accounting — all in one platform.
                 </p>
                 <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
                   Course &nbsp;·&nbsp; Assignments &nbsp;·&nbsp; Fees &nbsp;&nbsp;·&nbsp; Leave &nbsp;·&nbsp; Accounting
                 </p>
               </div>
-              <div className="relative min-h-[350px]">
+              <div className="relative min-h-[220px] sm:min-h-[350px]">
                 <img
                   src="/work/edufront/edufront1.png"
                   alt="Learning Management System"
@@ -111,18 +116,18 @@ export default function Home() {
           </div>
           <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-10 flex flex-col justify-center">
+              <div className="p-6 sm:p-10 flex flex-col justify-center">
                 <p className="text-xs text-gray-400 tracking-widest uppercase">
                   03 / 03 &nbsp;&middot;&nbsp; Shipping Logistics ERP
                 </p>
-                <p className="text-lg leading-relaxed text-gray-800 mt-6">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
                   A powerful shipping logistics ERP system for managing vessels, cargo, deliveries, and accounts — providing real-time fleet tracking and cargo distribution insights.
                 </p>
                 <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
                   Vessels &nbsp;·&nbsp; Cargo &nbsp;·&nbsp; Delivery &nbsp;·&nbsp; Fleet Tracking
                 </p>
               </div>
-              <div className="relative min-h-[350px]">
+              <div className="relative min-h-[220px] sm:min-h-[350px]">
                 <img
                   src="/work/seapol/image.png"
                   alt="Shipping Logistics ERP"

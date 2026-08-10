@@ -152,10 +152,10 @@ export default function SktPage() {
   return (
     <div>
       <Navbar />
-      <section className="bg-[#90e0ef] pt-44 pb-12 px-8">
-        <div className="mx-auto max-w-6xl bg-white rounded-3xl py-12 px-8 shadow-lg">
+      <section className="bg-[#90e0ef] pt-28 sm:pt-44 pb-8 sm:pb-12 px-4 sm:px-8">
+        <div className="mx-auto max-w-6xl bg-white rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Bleumont Distribution ERP — Demo Video
             </h2>
           </div>
@@ -173,9 +173,9 @@ export default function SktPage() {
         </div>
       </section>
 
-      <section className="bg-[#90e0ef] pb-24 px-8">
-        <div className="mx-auto max-w-6xl bg-white rounded-3xl py-12 px-8 shadow-lg">
-          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight text-center">
+      <section className="bg-[#90e0ef] pb-16 sm:pb-24 px-4 sm:px-8">
+        <div className="mx-auto max-w-6xl bg-white rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight text-center">
             Key Features
           </h2>
 
@@ -187,7 +187,7 @@ export default function SktPage() {
               className="hidden md:block absolute left-1/2 inset-y-0 w-px bg-gray-200 -translate-x-1/2"
             />
 
-            <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-12 sm:gap-20">
               {features.map((feature, i) => {
                 // Image leads on even rows, text leads on odd ones. The image is
                 // always first in the DOM so the stacked mobile order stays
@@ -237,10 +237,10 @@ export default function SktPage() {
                         imageOnRight ? "md:order-1 md:pr-14" : "md:pl-14"
                       }
                     >
-                      <h3 className="font-[family-name:var(--font-geist-sans)] text-3xl font-bold text-gray-900 tracking-tight">
+                      <h3 className="font-[family-name:var(--font-geist-sans)] text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                         {feature.name}
                       </h3>
-                      <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                      <p className="mt-4 text-base sm:text-lg leading-relaxed text-gray-600">
                         {feature.body}
                       </p>
                     </div>

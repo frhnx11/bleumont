@@ -116,10 +116,10 @@ export default function EdufrontPage() {
   return (
     <div>
       <Navbar />
-      <section className="bg-[#90e0ef] min-h-screen pt-44 pb-24 px-8">
-        <div className="mx-auto max-w-4xl bg-white rounded-3xl py-12 px-8 shadow-lg">
+      <section className="bg-[#90e0ef] min-h-screen pt-28 sm:pt-44 pb-16 sm:pb-24 px-4 sm:px-8">
+        <div className="mx-auto max-w-4xl bg-white rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Bleumont LMS-ERP — Demo Video
             </h2>
           </div>
@@ -136,9 +136,9 @@ export default function EdufrontPage() {
           </div>
         </div>
 
-        <div className="mt-12 mx-auto max-w-4xl bg-orange-200 rounded-3xl py-12 px-8 shadow-lg">
+        <div className="mt-12 mx-auto max-w-4xl bg-orange-200 rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Before Bleumont:
             </h2>
             <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-xl text-gray-600 tracking-tight">
@@ -169,9 +169,9 @@ export default function EdufrontPage() {
           </div>
         </div>
 
-        <div className="mt-12 mx-auto max-w-4xl bg-[#c8ee44] rounded-3xl py-12 px-8 shadow-lg">
+        <div className="mt-12 mx-auto max-w-4xl bg-[#c8ee44] rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               With Bleumont:
             </h2>
           </div>
@@ -195,8 +195,8 @@ export default function EdufrontPage() {
       </section>
 
       <section className="bg-[#90e0ef] -mt-12 pb-24 px-8">
-        <div className="mx-auto max-w-4xl bg-white rounded-3xl py-12 px-8 shadow-lg">
-          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-bold text-gray-900 tracking-tight text-center">
+        <div className="mx-auto max-w-4xl bg-white rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg">
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight text-center">
             Key Features
           </h2>
 

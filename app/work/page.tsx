@@ -34,21 +34,21 @@ export default function WorkPage() {
   return (
     <div>
       <Navbar />
-      <section className="bg-[#90e0ef] min-h-screen pt-32 pb-24 px-8">
-        <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-10 px-12 shadow-lg">
-          <h2 className="font-[family-name:var(--font-geist-sans)] text-5xl font-semibold text-black tracking-tight">
+      <section className="bg-[#90e0ef] min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-8">
+        <div className="mx-auto max-w-xl text-center bg-white rounded-3xl py-8 px-5 sm:py-10 sm:px-12 shadow-lg">
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-semibold text-black tracking-tight">
             Our Work
           </h2>
-          <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-xl text-gray-600 tracking-tight">
+          <p className="font-[family-name:var(--font-geist-sans)] mt-4 text-base sm:text-xl text-gray-600 tracking-tight">
             Projects we&apos;ve delivered for our clients
           </p>
         </div>
 
-        <div className="mt-12 mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-10 sm:mt-12 mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project) => {
             const card = (
               <div
-                className={`bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center${
+                className={`bg-white rounded-3xl shadow-lg p-6 sm:p-8 flex flex-col items-center text-center${
                   project.href
                     ? " hover:shadow-xl transition-shadow cursor-pointer"
                     : ""
