@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ContactForm from "@/components/ContactForm";
 
 export default function AboutPage() {
   return (
@@ -39,6 +40,22 @@ export default function AboutPage() {
           <p className="mt-8 text-base italic text-gray-500">
             Full details of our core team will follow shortly.
           </p>
+        </div>
+
+        <div
+          id="contact"
+          className="mt-8 mx-auto max-w-3xl bg-white rounded-3xl py-8 px-5 sm:py-12 sm:px-8 shadow-lg scroll-mt-28"
+        >
+          <h2 className="font-[family-name:var(--font-geist-sans)] text-3xl sm:text-4xl md:text-5xl font-semibold text-black tracking-tight text-center">
+            Contact Us
+          </h2>
+          <p className="mt-4 text-center text-base sm:text-lg text-gray-600">
+            Tell us what you&apos;re trying to solve and we&apos;ll get back to you.
+          </p>
+
+          <div className="mt-8">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </div>
