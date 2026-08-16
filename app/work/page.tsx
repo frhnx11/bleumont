@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -29,6 +30,12 @@ const projects = [
     href: "/work/edufront",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Our Work",
+  description:
+    "ERP, LMS and logistics platforms we have built and delivered for our clients.",
+};
 
 export default function WorkPage() {
   return (

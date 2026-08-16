@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "ERP veterans, business process specialists and AI engineers building software that gets adopted.",
+};
 
 export default function AboutPage() {
   return (
