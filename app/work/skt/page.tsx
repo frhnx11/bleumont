@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 // Hosted on Cloudflare R2 (zero egress) rather than public/ — the file is ~14 MB
 // and would otherwise live in git history forever and burn Vercel bandwidth.
 const DEMO_VIDEO_URL =
-  "https://pub-6d8a0fb48e5c438f8f230951adac4c79.r2.dev/skt-demo.mp4";
+  "https://media.bleumont.in/skt-demo.mp4";
 
 type Shot = { src: string; alt: string; w: number; h: number };
 
