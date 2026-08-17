@@ -63,9 +63,12 @@ export default function Navbar() {
         </div>
 
         {/* Right: CTA (desktop) */}
-        <button className="hidden md:block rounded-full bg-[#c8ee44] px-6 py-2.5 text-base font-medium text-gray-900 hover:bg-[#bde33b] transition-colors">
+        <a
+          href="/about#contact"
+          className="hidden md:block rounded-full bg-[#c8ee44] px-6 py-2.5 text-base font-medium text-gray-900 hover:bg-[#bde33b] transition-colors"
+        >
           Get Started
-        </button>
+        </a>
 
         {/* Right: Menu toggle (mobile) */}
         <button
@@ -92,9 +95,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <button className="mt-2 w-full rounded-full bg-[#c8ee44] px-6 py-3 text-base font-medium text-gray-900 hover:bg-[#bde33b] transition-colors">
+          <a
+            href="/about#contact"
+            onClick={() => setOpen(false)}
+            className="mt-2 block w-full rounded-full bg-[#c8ee44] px-6 py-3 text-center text-base font-medium text-gray-900 hover:bg-[#bde33b] transition-colors"
+          >
             Get Started
-          </button>
+          </a>
         </div>
       )}
     </nav>
