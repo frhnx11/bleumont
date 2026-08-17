@@ -1,7 +1,38 @@
 "use client";
 
+import Link from "next/link";
 import LiquidEther from "@/components/LiquidEther";
 import Navbar from "@/components/Navbar";
+
+// Display order is this array's order; the NN / NN counter is derived from it.
+// Note imageClass differs — the distribution shot is centre-cropped, the other
+// two are anchored left.
+const products = [
+  {
+    label: "Distribution System",
+    body: "A complete distribution management system with inventory tracking, sales processing, and automated invoicing — built entirely around your workflow.",
+    tags: "Inventory  ·  Sales  ·  Invoicing",
+    image: "/work/skt/best-erp-software-04-microsoft.webp",
+    imageClass: "",
+    href: "/work/skt",
+  },
+  {
+    label: "Learning Management System",
+    body: "A comprehensive learning management system covering courses, assignments, teachers, students, fees, payroll, leave applications, and accounting — all in one platform.",
+    tags: "Course  ·  Assignments  ·  Fees   ·  Leave  ·  Accounting",
+    image: "/work/edufront/edufront1.png",
+    imageClass: "object-left",
+    href: "/work/edufront",
+  },
+  {
+    label: "Shipping Logistics ERP",
+    body: "A powerful shipping logistics ERP system for managing vessels, cargo, deliveries, and accounts — providing real-time fleet tracking and cargo distribution insights.",
+    tags: "Vessels  ·  Cargo  ·  Delivery  ·  Fleet Tracking",
+    image: "/work/seapol/image.png",
+    imageClass: "object-left",
+    href: "/work/seapol",
+  },
+];
 
 export default function Home() {
   return (
@@ -69,73 +100,36 @@ export default function Home() {
             We can build anything. But here are some examples to understand us better
           </p>
         </div>
-        <div className="mt-12 mx-auto max-w-4xl px-4">
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-6 sm:p-10 flex flex-col justify-center">
-                <p className="text-xs text-gray-400 tracking-widest uppercase">
-                  01 / 03 &nbsp;&middot;&nbsp; Distribution System
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
-                  A complete distribution management system with inventory tracking, sales processing, and automated invoicing — built entirely around your workflow.
-                </p>
-                <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
-                  Inventory &nbsp;·&nbsp; Sales &nbsp;·&nbsp; Invoicing
-                </p>
+        <div className="mt-12 mx-auto max-w-4xl px-4 space-y-8">
+          {products.map((product, i) => (
+            <Link
+              key={product.href}
+              href={product.href}
+              className="block bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="p-6 sm:p-10 flex flex-col justify-center">
+                  <p className="text-xs text-gray-400 tracking-widest uppercase">
+                    {String(i + 1).padStart(2, "0")} / {String(products.length).padStart(2, "0")}
+                    &nbsp;&middot;&nbsp; {product.label}
+                  </p>
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
+                    {product.body}
+                  </p>
+                  <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
+                    {product.tags}
+                  </p>
+                </div>
+                <div className="relative min-h-[220px] sm:min-h-[350px]">
+                  <img
+                    src={product.image}
+                    alt={product.label}
+                    className={`absolute inset-0 object-cover ${product.imageClass} h-full w-full md:rounded-r-3xl`}
+                  />
+                </div>
               </div>
-              <div className="relative min-h-[220px] sm:min-h-[350px]">
-                <img
-                  src="/work/skt/best-erp-software-04-microsoft.webp"
-                  alt="Distribution System"
-                  className="absolute inset-0 object-cover h-full w-full md:rounded-r-3xl"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-6 sm:p-10 flex flex-col justify-center">
-                <p className="text-xs text-gray-400 tracking-widest uppercase">
-                  02 / 03 &nbsp;&middot;&nbsp; Learning Management System
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
-                  A comprehensive learning management system covering courses, assignments, teachers, students, fees, payroll, leave applications, and accounting — all in one platform.
-                </p>
-                <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
-                  Course &nbsp;·&nbsp; Assignments &nbsp;·&nbsp; Fees &nbsp;&nbsp;·&nbsp; Leave &nbsp;·&nbsp; Accounting
-                </p>
-              </div>
-              <div className="relative min-h-[220px] sm:min-h-[350px]">
-                <img
-                  src="/work/edufront/edufront1.png"
-                  alt="Learning Management System"
-                  className="absolute inset-0 object-cover object-left h-full w-full md:rounded-r-3xl"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-6 sm:p-10 flex flex-col justify-center">
-                <p className="text-xs text-gray-400 tracking-widest uppercase">
-                  03 / 03 &nbsp;&middot;&nbsp; Shipping Logistics ERP
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-800 mt-6">
-                  A powerful shipping logistics ERP system for managing vessels, cargo, deliveries, and accounts — providing real-time fleet tracking and cargo distribution insights.
-                </p>
-                <p className="mt-6 text-xs tracking-wide text-gray-400 uppercase">
-                  Vessels &nbsp;·&nbsp; Cargo &nbsp;·&nbsp; Delivery &nbsp;·&nbsp; Fleet Tracking
-                </p>
-              </div>
-              <div className="relative min-h-[220px] sm:min-h-[350px]">
-                <img
-                  src="/work/seapol/image.png"
-                  alt="Shipping Logistics ERP"
-                  className="absolute inset-0 object-cover object-left h-full w-full md:rounded-r-3xl"
-                />
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>
